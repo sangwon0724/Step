@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* Image Grid */
+
+	.image-grid {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-bottom: 4em;
+	}
+
+		.image-grid .image {
+			margin: 0;
+			width: 25%;
+		}
+
+			.image-grid .image img {
+				width: 100%;
+			}
+
+		@media screen and (max-width: 980px) {
+
+			.image-grid {
+				margin-bottom: 3em;
+			}
+
+				.image-grid .image {
+					width: 50%;
+				}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			.image-grid {
+				margin-bottom: 2em;
+			}
+
+				.image-grid .image {
+					width: 100%;
+				}
+
+		}

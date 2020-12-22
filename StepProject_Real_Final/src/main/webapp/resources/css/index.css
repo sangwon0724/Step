@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+@import url(font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700");
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+/*======================================================================================================================*/
+/*===============================================기본 세팅용 css============================================================	*/
+
+/*초기화*/
+@import "./setting/reset.css";
+@import "./setting/box-model.css";
+
+/*시멘틱 태그*/
+@import "./setting/footer.css";
+@import "./setting/header.css";
+@import "./setting/nav.css";
+@import "./setting/semantic.css";
+
+/*기능 태그*/
+@import "./setting/form.css";
+@import "./setting/image.css";
+@import "./setting/image-gird.css";
+@import "./setting/list.css";
+@import "./setting/table.css";
+
+
+/*예외*/
+@import "./setting/button.css";
+
+/*======================================================================================================================*/
+/*=============================================== 페이지 공통 css ===========================================================*/
+
+@import "./share/banner.css";
+@import "./share/basic.css";
+@import "./share/box.css";
+@import "./share/container.css";
+@import "./share/feature.css";
+@import "./share/grid.css";
+@import "./share/icon.css";
+@import "./share/type.css";
+@import "./share/wrapper.css";
+
+
+
+/*======================================================================================================================*/
+/*=============================================== 각 페이지용 css ===========================================================*/
+
+@import "home.css";
+@import "mypage.css";
+@import "fes_list.css";
+@import "info.css";
+@import "search.css";
+@import "review_list.css";
+
+/*======================================================================================================================*/
+/*=============================================== 기본 설정 ================================================================*/
+
+html{
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+
+body{font-size:15px;}
+
+/* 평점 */
+.fa-star,.fa-star-half-alt{color:#FFC312; font-size:1.3em;}
+
+/* 이미지 커버 */
+.img_cover{
+  background-size: cover;
+  background-position: center;
+}

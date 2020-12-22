@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+/* tag_list.jsp의 body*/
+.tag_list_body{overflow-x: hidden;}
+
+/* 패널 정렬용 */
+.tag_section{width:100vw; height: auto; padding: 7vh 5vw 17vh 5vw; display: flex; justify-content: space-around;}
+
+/* 여행 목록 패널*/
+.tag_left_pannel{width:50vw; height:auto;}
+
+/*================================= 태그 종류 및 정렬 부분 ===========================================*/
+
+/* 축제 장르별 태그 패널 - 전체용 */
+.tag_group_pannel_top{width:100%;height: 10vh; background-color: white; display: flex; min-height: 50px;}
+
+/* 축제 장르별 태그 패널*/
+.tag_group_pannel{width:100%;height: 10vh; background-color: white; display: flex; min-height: 50px;}
+
+/* 태그별 탭 */
+.tag_tap_All, .tag_tap{
+	width:25%;height: 100%;
+	font-family: 'Do Hyeon', sans-serif; 
+	display: flex;justify-content: center; align-items: center;
+	white-space: nowrap;
+}
+
+/* tag_tap 안의 span만 커서 변경 */
+.tag_tap_All{cursor: pointer;font-size:200%;}
+.tag_tap{cursor: pointer;font-size:270%;}
+
+/* tag_tap_All의 js용 css */
+.tag_tap_All_hilight{font-size:160%;}
+
+/* 총 건수, 정렬 ( 최근 등록순, 평점순, 조회순 ) */
+.tag_setting_pannel{
+	width: 100%; height: 10vh;
+	border-top: 0.5em solid #b2bec3; border-bottom: 0.3em solid #EEEEEE;
+	display: flex; justify-content: space-between; align-items: center;
+	min-height: 50px;
+	padding-right: 2vw;
+}
+
+/* 총 건수 */
+.tag_fes_count{
+	width: 20%; height: 70%;
+	display: flex; justify-content: center; align-items: center;
+	font-family: 'Noto Sans KR', sans-serif; font-size:130%; font-weight: 500;
+}
+.tfc_span{ font-size: 140%; color: #0984e3; font-weight: 700;}
+
+/* 정렬 패널 ( 최근 등록순, 평점순, 조회순 ) */
+.tag_fes_order{width: 32%; height: 70%; display: flex; justify-content: space-around; align-items: center; white-space: nowrap;}
+
+/* 정렬 - 기본 폰트 */
+.tfo_rdate, .tfo_grade, .tfo_views{font-size: 100%; font-family: 'Noto Sans KR', sans-serif; font-weight: 300;cursor: pointer;}
+
+/* 정렬 - 선택시 폰트 (js로 추가) */
+.tfo_choice{font-size:120%; font-weight: 500;}
+
+/*================================= 축제 정보 부분 - 태그 페이지용 ===========================================*/
+
+/* 축제 정보가 보이는 패널 */
+.info_group_pannel{width: 100%; height: auto;}
+
+/* 각 축제별 정보 - 태그별 페이지용  */
+.tag_fes_info{
+	width: 100%; height: 30vh;
+	background-color: white;
+	border-bottom: 0.3em solid #EEEEEE;
+	display: flex; justify-content: space-between; align-items: center;
+	min-height: 152px;
+}
+
+/* 이미지 커버 */
+.tfi_image_pannel{
+	width: 27%; height: 80%;
+	background-color: #EEEEEE; background-size: 105% 105%; background-position: center;
+	cursor: pointer; 
+	min-height: 118px;
+}
+
+/* 내용 */
+.tfi_info_pannel{
+	width: 68%; height: 80%;
+	display: flex; flex-direction: column; justify-content: space-around; align-items: flex-start;
+	min-height: 118px;
+}
+
+/* 축제명 */
+.tfi_text_name{
+	width: 100%; height: 25%;
+	font-family: 'Do Hyeon', sans-serif; font-size: 170%;
+	display: flex; align-items: center;
+	cursor: pointer;
+	text-overflow:ellipsis; overflow: hidden; white-space: nowrap;
+}
+.tfi_text_name>span:hover{border-top:2px solid white; border-bottom: 2px solid black;}
+
+/* 축제 기간 */
+.tfi_text_date{
+	width: 100%; height: 20%;
+	display:flex; justify-content: space-between; align-items: flex-start;
+	font-family: 'Noto Sans KR', sans-serif; font-weight: 100;
+}
+
+/* 축제 내용*/
+.tfi_text_content{
+	width: 100%; height: 55%;
+	display: flex; justify-content: space-between; align-items: flex-start;
+	font-family: 'Noto Sans KR', sans-serif; font-weight: 100;
+	overflow-y: hidden;
+	min-height: 81px;
+	
+}
+.tfi_text_content>span{text-overflow:ellipsis; overflow: hidden;}
+
+/*================================= 빈 공간용 우측 패널 ===========================================*/
+
+/* 지역 선택 패널*/
+.tag_right_pannel{
+	width:25vw; height:auto;
+	margin-top: 10vh; padding-top: 3vh; padding-bottom: 3vh;
+}
+
+/*================================= 도시 및 지역 선택 사이드 메뉴 ===========================================*/
+
+/* 열기 버튼 */
+.tag_select_open{
+	width: 2.5vw; height: 5vw;
+	background-color: white;
+ 	position: absolute; right: 0; top: 15%;
+ 	border: 3px solid black;
+ 	border-right:0;
+ 	border-top-left-radius: 5vw; border-bottom-left-radius: 5vw;
+	display: flex; justify-content:flex-start; align-items: center;
+	padding-left: 0.5vw;
+	font-size: 150%; font-weight: bold; color: black;
+ 	z-index: 10;
+ 	cursor: pointer;
+}
+
+/* 사이드 메뉴 */
+.tag_select{
+	width: 30vw; height: auto;
+	background-color: #F7F7F7;
+	position: absolute; right:0; top: 15%;
+	z-index: 13;
+	transition: margin 1.2s;
+}
+
+/* 닫기 버튼이 있을 영역 */
+.tag_select_header{width: 100%; height: 8vh; position: relative;}
+
+/* 닫기 버튼 */
+.tag_select_close{
+	cursor: pointer; 
+	font-weight: bold; font-size: 150%;
+	line-height: 8vh; vertical-align: middle;
+	position: absolute; right: 5px;
+}
+
+
+/* 지역 선택 패널 정렬용 */
+.tag_area_order{width:100%; height: auto;background-color: #F7F7F7;display: flex; flex-wrap: wrap; justify-content: center; align-items: center; }
+
+/* 전국 단위 */
+.big_area_pannel{
+	width: 80%; height: auto;
+	display:flex; flex-wrap:wrap; justify-content:space-between;
+	padding-top: 3vh; padding-bottom: 3vh;
+}
+.bap_border_bottom{border-bottom: 2px solid #c8c8c8;margin-bottom: 2vh;}
+
+/* 태그 */
+.bap_tag, .cap_tag{
+	width:27%;height: 5vh;
+	border-radius: 2em;
+	cursor: pointer;
+	display:flex; justify-content: center; align-items: center;
+	padding-top: 4vh; padding-bottom: 4vh;
+}
+
+/* 태그 선택시 색상 변경 */
+.bap_tag_color, .cap_tag_color{background-color:#5352ed; color:white;}
+
+/* 도시 단위 */
+.city_area_pannel{
+	width:80%;height: auto;
+	display:flex; flex-wrap:wrap; justify-content:space-between;
+}
+/*================================= 미디어 쿼리 ===========================================*/
+
+@media screen and (max-width: 1223px) {
+			.tag_left_pannel{width: 70vw;}
+			.tag_right_pannel{display: none;}
+			.tag_select_open{width: 3vw; height: 6vw; border-top-left-radius: 6vw; border-bottom-left-radius: 6vw; top: 25%;}
+			.tag_select{width: 50vw;}
+			.tag_tap{font-size:250%;}
+}
+
+@media screen and (max-width: 1176px) {
+			.tag_tap_All_hilight{font-size:150%;}
+}
+
+@media screen and (max-width: 874px) {
+			.tag_left_pannel{width: 85vw;}
+			.tag_select_open{ width: 4vw; height: 8vw; border-top-left-radius: 8vw; border-bottom-left-radius: 8vw; top: 37%;}
+			.tag_select{width: 70vw;}
+			.tag_tap_All_hilight{font-size:140%;}
+}
+
+@media screen and (max-width: 720px) {
+			.tag_left_pannel{width: 90vw;}
+			.tag_tap{font-size:230%;}
+}
+
+@media screen and (max-width: 680px) {
+			.tag_section{padding: 0; justify-content: center;}
+			.tag_left_pannel{width: 95vw;}
+			.tag_select_open{ width: 5vw; height: 10vw; border-top-left-radius: 10vw; border-bottom-left-radius: 10vw; }
+			.tag_tap_All_hilight{font-size:130%;}
+}
+
+@media screen and (max-width: 645px) {
+			.tag_tap{font-size:220%;}
+			.tag_fes_order{width:50%;}
+			.tag_tap_All_hilight{font-size:120%;}
+}
+
+@media screen and (max-width: 567px) {
+			.tag_tap{font-size:200%;}
+			.tag_tap_All_hilight{font-size:110%;}
+}
+
+@media screen and (max-width: 515px) {
+			.tag_tap{font-size:180%;}
+			.tag_select_open{ width: 6vw; height: 12vw; border-top-left-radius: 12vw; border-bottom-left-radius: 12vw; }
+			.tag_tap_All_hilight{font-size:100%;}
+}

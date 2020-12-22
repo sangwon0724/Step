@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+.feature_list{
+	width:70em;
+	background-color: white;
+	margin:0 auto;
+	margin-bottom:90px;
+	padding : 10px 5px;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.fes_box{
+	width:30%;
+	height:15vw;
+	margin: 15px 0px;
+	border: 1px solid #b2bec3;
+	position: relative;
+}
+
+.fes_box>img{
+	width: 100%;
+	height:90%;
+	z-index: -1;
+}
+
+.bottom_title{
+	width: 100%;
+	height: 15%;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	font-family: 'Black Han Sans', sans-serif;
+	font-size: 20px;
+	color:#34495e;
+	border-top: 1px solid #b2bec3;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 11px;
+}
+
+.cover_menu{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(52,73,94,0.9);
+	display: none;
+	z-index: 7;
+}
+
+.fes_box:hover>.cover_menu{
+	display: block;
+}
+
+@keyframes ani_up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes ani_down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.span_cover{position: absolute;left: 20px; top: 20px;animation: ani_down 0.5s ease-out forwards;}
+.line_title{color:white;font-size: 23px;font-weight: bold;}
+.line_date{color:white;font-size:17px;display:block; margin-top: 7px;}
+
+.plus_info{font-size:14px;font-weight: bold; 
+			position: absolute;right: 20px; bottom: 20px;
+			animation: ani_up 0.5s ease-out forwards;}
+.plus_info:focus{outline: none;}

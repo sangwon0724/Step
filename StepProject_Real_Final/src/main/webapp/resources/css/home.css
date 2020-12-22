@@ -1,0 +1,588 @@
+@charset "UTF-8";
+
+#two{
+	width:100vw;
+	height:auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 20vh;
+}
+
+/* 제목 패널 */
+.two_title_pannel{width:100%;height:27vh;display: flex;flex-direction: column; justify-content: flex-end; align-items: center;}
+.two_title{width:100%; height: 70%; display: flex; justify-content: center; align-items: center;}
+.two_title_span{font-size: 3.5em; font-family: 'Do Hyeon', sans-serif; font-weight: 400; color: black;}
+
+
+/* 태그 박스와 랭크 박스 정렬용 공간 */
+.two_top{width:100vw;height: auto;padding: 5vh 5vw;display: flex; flex-wrap:wrap; justify-content: space-around; align-items: flex-end; background-image: url("../images/tagBack.png");}
+
+/*================================= 태그 목록 부분 ===========================================*/
+
+/*태그 박스가 모여있는 패널*/
+.tag_pannel{
+	width:52.6vw;
+	height:80vh;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 8%;
+	min-width: 375px;
+	min-height: 512px;
+}
+
+/* 태그 박스 */
+.tag_box{
+	width: 90%;
+	height: 60.3%;
+	font-size: 15px;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+  	grid-template-rows: repeat(2,1fr);
+}
+
+.tag_box>div{display: flex; justify-content: center; align-items: center;}
+
+.tag_link{font-size: 50px; font-weight: bold; color: white; cursor: pointer; text-shadow: 5px 5px 3px rgba(70, 70, 70, 1);}
+
+/*================================= 순위 목록 부분 ===========================================*/
+
+/* 각 행사별 인기 순위 리스트*/
+.rank_list{
+	width:25vw;
+	height:70vh;
+	position: relative;
+	border-radius: 2em;
+	border:3px solid #6d7478;
+	min-width: 315px;
+	min-height: 514px;
+	background-color: white;
+}
+
+/* 인기 순위 리스트의 제목 상자*/
+.rank_title{
+	width:100%;
+	height:12%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+}
+
+/*인기 순위 리스트의 제목*/
+.rl_title{font-family: 'Do Hyeon', sans-serif; }
+.rl_title>span{ font-size:27px; color: #6c5ce7; font-weight: bold;}
+
+/* 순위 리스트가 모여있는 박스*/
+.rank_list_main{
+	width: 100%;
+	height: 76%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-family: 'Noto Serif KR', serif;
+	font-weight: 300;
+	border-top:3px solid #6d7478;
+	border-bottom:3px solid #6d7478;
+}
+
+/* 추천 내용 */
+.recommend{width: 100%; height: 100%; display: flex; flex-direction: column;}
+
+/* js용 클래스 */
+.recommend_none{display:none;}
+
+/* 순위와 축제 제목*/
+.recommend_header{width: 100%; height: 12%; padding: 0 3%; display: flex; align-items: center;}
+.recommend_header_rank{
+	width: 9%; height: 80%;
+	border-radius: 50%; border: 2px solid #6d7478;
+	display: flex; justify-content: center; align-items: center;
+	margin-right: 3%;
+}
+.recommend_header_rank>span{color: black; font-weight: bold;}
+.recommend_header_span{color: black; font-weight: bold; text-overflow:ellipsis; overflow: hidden; white-space: nowrap;}
+
+/* 축제 사진 */
+.recommend_main{width: 100%; height: 76%; border-top:2px solid #b2bec3; border-bottom: 2px solid #b2bec3;}
+
+/* 평점과 조회수 */
+.recommend_footer{
+	width: 100%; height: 12%;
+	display: flex; align-items: center;
+	padding-left: 3%;
+}
+.recommend_footer>span{margin: 0 3%; font-weight: bold; color: black;}
+
+/* 컨트롤러 부분 */
+.rank_list_footer{
+	width: 100%;
+	height: 12%;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	display: flex; justify-content: space-around; align-items: center;
+}
+
+/* 컨트롤러의 각 버튼 */
+.recommend_show_left, .recommend_show_right, .recommend_show_start, .recommend_show_stop{
+	width: 10%; height: 62%; border: 2px solid #6d7478;
+	display: flex; justify-content: center; align-items: center;
+	cursor: pointer;
+}
+.rank_list_footer>div>i{font-weight: bold; color: black;}
+/*================================= 계절별 축제 부분 ===========================================*/
+
+/* 계절별 축제 리스트 상자 */
+.season_fes_list{
+	width:80vw;
+	height:auto;
+	margin: 5vh auto;
+	min-width: 400px;
+	min-height: 579px;
+}
+
+/* 계절별 상자의 제목 부분*/
+.season_title{
+	width:100%;
+	height:5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3vh;
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 2.5em;
+	color: black;
+	min-height: 32px;
+}
+
+/* 계절별 상자의 탭 부분*/
+.season_tap{
+	width:100%;
+	height: 7vh;
+	background-color: white;
+	display: flex;
+	margin: 0 auto;
+	z-index: 7;
+	min-height: 45px;
+}
+
+/* 각 계절의 종류*/
+.season_tap_box{
+	width: 25%;
+	height: 100%;
+	border-top:1px solid #b2bec3;
+	border-bottom:1px solid #b2bec3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-size:20px;
+}
+
+.stb_title{cursor: pointer;}
+
+/* 각 계절별 제목 색상 */
+.stb_t_1{color:#87AA50;}
+.stb_t_2{color:#7AB0D6;}
+.stb_t_3{color:#DC4309;}
+.stb_t_4{color:#ADA8A4;}
+
+/* 각 계절별 정보가 보이는 부분 */
+.season_fes_main{
+	width: 100%;
+	height: 70vh;
+	margin-top:3vh;
+	background-color:#EEEEEE;
+    position: relative;
+	min-height: 452px;
+}
+
+/* 각 계절별 패널 */
+.sfm{width:100%; height:100%; position: relative;}
+.sfm_1{z-index: 2; background-color: #87AA50; overflow-x: hidden;}
+.sfm_2{z-index: 3; background-color: #7AB0D6;}
+.sfm_3{z-index: 4; background-color: #DC4309;}
+.sfm_4{z-index: 5; background-color: #ADA8A4;}
+.sfm_none{display : none;}
+
+/* 축제 개수별 grid container */
+.sfm_grid_0{
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap:10px;
+  grid-template-areas:
+    "sfm_cell_0";
+}
+.sfm_grid_1{
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap:10px;
+  grid-template-areas:
+    "sfm_cell_1";
+}
+.sfm_grid_2{
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap:10px;
+  grid-template-areas:
+    "sfm_cell_1 sfm_cell_2";
+}
+.sfm_grid_3{
+  display: grid;
+  height: 100%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap:10px;
+  grid-template-areas:
+    "sfm_cell_1 sfm_cell_2"
+    "sfm_cell_1 sfm_cell_3";
+}
+.sfm_grid_4{
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 1fr;
+  gap:10px;
+  grid-template-areas:
+    "sfm_cell_1 sfm_cell_1 sfm_cell_1"
+    "sfm_cell_2 sfm_cell_3 sfm_cell_4";
+}
+.sfm_grid_5{
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr 1fr;
+  gap:10px;
+  grid-template-areas:
+    "sfm_cell_1 sfm_cell_1 sfm_cell_1 sfm_cell_1"
+    "sfm_cell_2 sfm_cell_3 sfm_cell_4 sfm_cell_5";
+}
+
+/* 월별 축제 grid container의 cell */
+.sfm_grid_cell_0{grid-area: sfm_cell_0; cursor: pointer;
+display: flex; justify-content: center; align-items: center; font-size: 35px; font-weight: bold;}
+.sfm_grid_cell_1{background-color:red; grid-area: sfm_cell_1; cursor: pointer;}
+.sfm_grid_cell_2{background-color:orange; grid-area: sfm_cell_2; cursor: pointer;}
+.sfm_grid_cell_3{background-color:yellow; grid-area: sfm_cell_3; cursor: pointer;}
+.sfm_grid_cell_4{background-color:green; grid-area: sfm_cell_4; cursor: pointer;}
+.sfm_grid_cell_5{background-color:blue; grid-area: sfm_cell_5; cursor: pointer;}
+
+/* 각 cell의 이미지 */
+.sfm_cell_img{width: 100%; height: 100%; position: relative;}
+
+/* 각 cell의 정보 */
+.sfm_cell_info{
+	width: 100%; height: 100%;
+	position: absolute; top: 0; left:0;
+	font-weight: bold;
+	background-color: rgba(0,0,0,0.1);
+	display: flex; flex-direction: column; justify-content: center; align-items: center;
+	color: white;
+	min-height: 83px;
+}
+.sfm_cell_name{width: 100%; height: 25%; display: flex; justify-content: center; align-items: center; font-size: 30px; }
+.sfm_cell_name>span{text-overflow:ellipsis; overflow: hidden; white-space: nowrap;}
+.sfm_cell_date{
+	width: 100%; height: 15%;
+	display: flex; justify-content: center; align-items: center;
+	font-size: 20px; margin: 3% 0;
+	text-align: center;
+}
+.sfm_cell_area{width: 100%; height: 15%; display: flex; justify-content: center; align-items: center; font-size: 20px;}
+
+/*================================= 월별 여행지 부분 ===========================================*/
+
+/* 월별 여행지 페널*/
+.monthly_fes_pannel{width:80vw; height:auto; margin: 6vh auto 0 auto; min-width: 400px; min-height: 579px;}
+
+/* 월별 여행지 - 제목 */
+.monthly_fes_title{
+	width:100%; height: 5vh;
+	display: flex; justify-content: center; align-items: center;
+	margin-bottom: 3vh;
+	font-family: 'Do Hyeon', sans-serif; font-size: 2.5em; color: black;
+	min-height: 32px;
+}
+
+/* 월별 여행지 - 월 이동 */
+.monthly_fes_header{width:100%; height: 7vh; display: flex; justify-content: center; padding-bottom: 10px; min-height: 45px;}
+.monthly_span{color: black;}
+/* 월별 여행지 - 컨트롤러 */
+.monthly_fes_ctrl{
+	width:29.2%; height: 100%;
+	font-size:30px; font-weight: bold;
+	display: flex; justify-content: space-around; align-items: center;
+}
+
+/* span으로 인한 마우스 커서 모양 변경 */
+.mfm_ctrl{cursor: pointer;}
+.mfm_ctrl:active{color: black;}
+
+/* 월별 여행지 - 정보가 보여지는 부분 */
+.monthly_fes_main{width:100%; height: 70vh; background-color: skyblue; min-width: 327px; margin-top: 3vh; min-height: 452px;}
+
+/* 월별 여행지 - 공통 */
+.mfm {width: 100%; height: 100%; padding:10px; color:white; font-size: 20px; font-weight: bold;}
+
+/* 축제 개수별 grid container */
+.mfm_grid_0{
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap:10px;
+  grid-template-areas:
+    "mfm_cell_0";
+}
+.mfm_grid_1{
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap:10px;
+  grid-template-areas:
+    "mfm_cell_1";
+}
+.mfm_grid_2{
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap:10px;
+  grid-template-areas:
+    "mfm_cell_1 mfm_cell_2";
+}
+.mfm_grid_3{
+  display: grid;
+  height: 100%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap:10px;
+  grid-template-areas:
+    "mfm_cell_1 mfm_cell_2"
+    "mfm_cell_1 mfm_cell_3";
+}
+.mfm_grid_4{
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 1fr;
+  gap:10px;
+  grid-template-areas:
+    "mfm_cell_1 mfm_cell_1 mfm_cell_1"
+    "mfm_cell_2 mfm_cell_3 mfm_cell_4";
+}
+.mfm_grid_5{
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr 1fr;
+  gap:10px;
+  grid-template-areas:
+    "mfm_cell_1 mfm_cell_1 mfm_cell_1 mfm_cell_1"
+    "mfm_cell_2 mfm_cell_3 mfm_cell_4 mfm_cell_5";
+}
+
+/* 월별 축제 grid container의 cell */
+.mfm_grid_cell_0{
+	grid-area: mfm_cell_0; cursor: pointer;
+	display: flex; justify-content: center; align-items: center;
+	font-size: 35px; font-weight: bold;
+}
+.mfm_grid_cell_1{background-color:red; grid-area: mfm_cell_1; cursor: pointer;}
+.mfm_grid_cell_2{background-color:orange; grid-area: mfm_cell_2; cursor: pointer;}
+.mfm_grid_cell_3{background-color:yellow; grid-area: mfm_cell_3; cursor: pointer;}
+.mfm_grid_cell_4{background-color:green; grid-area: mfm_cell_4; cursor: pointer;}
+.mfm_grid_cell_5{background-color:blue; grid-area: mfm_cell_5; cursor: pointer;}
+
+/* 월별 여행지 - 월별 구분 */
+.mfm_1{background-color: #e74c3c;}
+.mfm_2{background-color: #f39c12;}
+.mfm_3{background-color: #f1c40f;}
+.mfm_4{background-color: #16a085;}
+.mfm_5{background-color: #3498db;}
+.mfm_6{background-color: #34495e;}
+.mfm_7{background-color: #9b59b6;}
+.mfm_8{background-color: #95a5a6;}
+.mfm_9{background-color: #cf6a87;}
+.mfm_10{background-color: #f7d794;}
+.mfm_11{background-color: #e056fd;}
+.mfm_12{background-color: #badc58;}
+
+.mfm_none{display: none;}
+
+/* 각 cell의 이미지 */
+.mfm_cell_img{width: 100%; height: 100%; position: relative;}
+
+/* 각 cell의 정보 */
+.mfm_cell_info{
+	width: 100%; height: 100%;
+	position: absolute; top: 0; left:0;
+	font-weight: bold;
+	background-color: rgba(0,0,0,0.1);
+	display: flex; flex-direction: column; justify-content: center; align-items: center;
+	min-height: 83px;
+}
+.mfm_cell_name{width: 100%; height: 25%; display: flex; justify-content: center; align-items: center;}
+.mfm_cell_name>span{text-overflow:ellipsis; overflow: hidden; white-space: nowrap; font-size: 30px;}
+.mfm_cell_date{
+	width: 100%; height: 15%;
+	display: flex; justify-content: center; align-items: center;
+	font-size: 20px; margin: 3% 0;
+	text-align: center;
+}
+.mfm_cell_area{width: 100%; height: 15%; display: flex; justify-content: center; align-items: center; font-size: 20px;}
+
+/*================================= 미디어 쿼리 ===========================================*/
+
+@media screen and (max-width: 1280px) {
+
+			/*.two_top{background: none;}*/
+			
+			.tag_pannel {
+				width:62vw;
+				margin-bottom: 7vh;
+				/*background-image: url("../images/tagBack.png");*/
+			}
+
+			.rank_list{
+				width: 30vw;
+				height: 90vh;
+				margin-bottom: 7vh;
+			}
+			
+			.sfm_cell_area, .mfm_cell_area{display: none;}
+}
+
+@media screen and (max-width: 1155px) {
+			.rank_list{ width: 35vw; }
+}
+
+@media screen and (max-width: 990px) {
+			.rank_list{ width: 40vw; }
+}
+
+@media screen and (max-width: 847px) {
+			.tag_link{font-size: 40px;}
+}
+
+
+@media screen and (max-width:800px){
+
+.rank_list{ width: 45vw; }
+	
+.sfm_grid_2{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "sfm_cell_1""sfm_cell_2";
+}
+.sfm_grid_3{
+ grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "sfm_cell_1""sfm_cell_2""sfm_cell_3";
+}
+.sfm_grid_4{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "sfm_cell_1""sfm_cell_2""sfm_cell_3""sfm_cell_4";
+}
+.sfm_grid_5{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "sfm_cell_1""sfm_cell_2""sfm_cell_3""sfm_cell_4""sfm_cell_5";
+}
+
+.mfm_grid_2{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "mfm_cell_1""mfm_cell_2";
+}
+.mfm_grid_3{
+ grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "mfm_cell_1""mfm_cell_2""mfm_cell_3";
+}
+.mfm_grid_4{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "mfm_cell_1""mfm_cell_2""mfm_cell_3""mfm_cell_4";
+}
+.mfm_grid_5{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "mfm_cell_1""mfm_cell_2""mfm_cell_3""mfm_cell_4""mfm_cell_5";
+}
+
+}
+
+@media screen and (max-width: 725px) {
+			.tag_link{font-size: 32px;}
+}
+
+@media screen and (max-width: 710px) {
+			.rank_list{ width: 50vw; }
+}
+
+
+@media screen and (max-width: 620px) {
+
+			.tag_pannel {
+				width:75vw;
+				margin-bottom: 7vh;
+			}
+
+			.rank_list{
+				width:63vw;
+				margin-bottom: 7vh;
+			}
+			
+			.two_title_span{font-size: 2.7em;}
+
+}
+
+@media screen and (max-height: 585px) {
+
+			.season_title>span, .monthly_fes_title>span{font-size: 25px; color: red;}
+}
+
+@media screen and (max-height: 550px) {
+
+			.tag_pannel {
+				width:80vw;
+				margin-bottom: 7vh;
+			}
+
+			.rank_list{
+				width:50vw;
+				height:85vh;
+				margin-bottom: 7vh;
+			}
+}
+
+@media screen and (max-height: 520px) {
+
+			.rl_title>span{font-size: 22px;}
+}
+
+@media screen and (max-height: 475px) {
+
+			.season_title, .monthly_fes_title{font-size: 20px;}
+}

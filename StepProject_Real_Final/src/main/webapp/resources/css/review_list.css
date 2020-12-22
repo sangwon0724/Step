@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* 게시글 수 */
+.review_count{width: 100%; height: 10vh; display: flex; padding-left: 2vw; align-items: center;}
+.review_count>span:nth-child(odd) { color: black; font-size: 17px; font-weight: bold;}
+.review_count>span:nth-child(2) {  color: #0984e3; font-size: 25px; font-weight: bold; margin: 0 3px;}
+
+/* 게시글 목록 */
+.review_list{width: 100%; height: auto; display: flex; flex-wrap: wrap; justify-content: space-around; padding-top: 3vh;}
+
+/* 각 게시글 */
+.review_post{
+	width: 28%; height: 80vh;
+	margin-bottom: 10vh;
+	display: flex; flex-direction: column; justify-content: space-around; align-items: center;
+	border: 3px solid #EEEEEE;
+	border-radius: 10%;
+}
+
+/* 각 게시글의 썸네일 */
+.review_post>a{width: 80%; height: 50%; background-color: red; border-radius: 10%; margin-top: 10%;}
+.review_post>a>img{width: 100%; height: 100%;border-radius: 10%;}
+
+/*각 게시글의 내용*/
+.review_post_content{width: 80%; height: 25%; display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
+.review_post_content>div{width: 100%; height: 22%;}
+.review_post_content>div:nth-child(1){font-weight: bold; text-overflow:ellipsis; overflow: hidden; white-space: nowrap;}
+
+/* 빈 공간 용*/
+.review_post_none{width: 28%; height: 70vh;}
+
+
+/* ========================== 검색 기능  ========================== */
+
+.section_footer{width: 100%; height: 60px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5vh;}
+.review_search_box{width: 28%; height: 50px; border: none; background-color: #63C1AE;}
+.searchForm{width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+.rsb_text{width: 72%;  border: 1px solid black;}
+.searchForm>input{ height: 98%; border-radius: none; background-color: white; border: 1px solid #63C1AE;}
+.rsb_button{width: 28%; height: 100%; display: flex; justify-content: center; align-items: center; cursor: pointer;}
+.rsb_button>i{font-size: 20px;}
+	
+/* ========================== 미디어 쿼리 ========================== */
+
+	
+	@media screen and (max-width: 1265px) {
+			.review_search_box{width: 37%;}
+	}
+	@media screen and (max-width: 975px) {
+			.review_search_box{width: 46%;}
+			.review_post{width: 45%;}
+	}
+	@media screen and (max-width: 675px) {
+			.review_search_box{width: 55%;}
+	}
+	@media screen and (max-width: 585px) {
+			.review_search_box{width: 60%;}
+			.review_post{width: 75%;}
+	}

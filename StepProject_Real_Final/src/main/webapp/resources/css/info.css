@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+/* 정보 페이지 */
+.info_section{
+	width: 100vw; height: auto;
+	display: flex; flex-direction: column; justify-content: space-between; align-items: center; 
+	padding: 5vh 0 12vh 0;
+}
+
+/*================================= 리모컨  ===========================================*/
+
+/* 리모컨 */
+.info_ctrl{
+	width: 10vw; height: 42vh;
+	background-color: white;
+	right: 0.7vw; top: 37vh;
+	position: fixed;
+	display: flex; justify-content: center; align-items: center;
+  	border-radius: 2em;
+	box-shadow: inset -3px -3px 12px rgba(145, 160, 180, 0.45),
+    20px 20px 30px rgba(118, 146, 180, 0.18);
+}
+
+/* 리모컨의 화면 */
+.info_ctrl_screen{
+	width:85%; height: 90%;
+	background-color: #f1f2f6;
+	display: flex; flex-direction: column; justify-content: space-around; align-items: center;
+  	border-radius: 2em;
+}
+
+/* 리모컨의 각 줄 */
+.info_ctrl_line{ width:80%; height: 15%; display: flex; justify-content: flex-start; align-items: center; padding-left: 1.2vw; cursor: pointer;}
+
+/*================================= 기본 정보  ===========================================*/
+
+/* 기본 정보 */
+.info_basic_paneel{width: 73%; height: 27vh; margin-bottom: 7vh; min-height: 187px;}
+
+/* 기본 정보 - 축제명 */
+.ib_basic_name{
+	width: 100%; height: 48%;
+	display: flex; justify-content: center; align-items: flex-end;
+	padding-bottom:1vh;
+	font-family: 'Black Han Sans', sans-serif; font-size:280%; color: black;
+}
+
+/* 기본 정보 - 장소명 */
+.ib_basic_area{
+	width: 100%; height: 24%;
+	display: flex; justify-content: center;align-items: flex-start;
+	padding-top: 1vh;
+	font-family: 'Noto Sans KR', sans-serif; font-size:130%; font-weight:700; color: #575757;
+}
+
+/* 기본 정보 - 평점 + 조회수*/
+.ib_basic_other{
+	width: 100%; height: 28%;
+	display: flex; justify-content: space-between; align-items: center;
+	padding-left: 1vw; padding-right: 2vw;
+	font-family: 'Noto Sans KR', sans-serif; font-size:120%; font-weight:500; color: black;
+}
+/*================================= 사진 미리보기  부분 ===========================================*/
+
+/* 사진  미리보기 */
+.info_picture_pannel{width: 85%; height: auto; margin-bottom: 15vh;}
+.info_picture_header{
+	width: 100%; height: 9vh;
+	display: flex; justify-content: space-between; align-items: flex-end;
+	border-bottom: 3px solid black;
+	margin-bottom: 3vh;
+}
+.info_picture_header>span{font-family: 'Jua', sans-serif; font-size: 320%; color: black; margin-left: 1vw; margin-bottom: 2vh;}
+.info_picture_main{width: 70%; height: 81vh; display: flex; justify-content: center; align-items: center; overflow-x: hidden; position: relative; min-height: 450px; margin: 1vh auto 0 auto;}
+
+/*================================= 상세 정보 부분  ===========================================*/
+
+/* 상세 정보 */
+.info_detail_pannel{width: 73%; height: auto; margin-bottom: 10vh;}
+.info_detail_header{
+	width: 100%; height: 9vh;
+	display: flex; justify-content: space-between; align-items: flex-end;
+	border-bottom: 3px solid black;
+	margin-bottom: 3vh;
+}
+.info_detail_header>span{font-family: 'Jua', sans-serif; font-size: 320%; color: black; margin-left: 1vw; margin-bottom: 2vh;}
+.info_detail_main{width: 100%; height: auto;}
+
+/* 상세 정보 - 축제 소개 */
+.info_detail_intro{
+	width: 100%; height:auto;
+	min-height: 21vh;
+	padding-top: 3vh;
+	font-family: 'Nanum Gothic', sans-serif; font-weight: 700; font-size: 120%; color: #555555;
+}
+
+/* 상세 정보 - 카카오 API */
+.info_detail_map{width: 100%; height:80vh; display: flex; justify-content: center; align-items: center; margin: 7vh 0;}
+.info_detail_map>div{width: 95%; height: 95%; background-color: skyblue;}
+
+/* 상세 정보 - 나머지 정보들 */
+.info_detail_other{
+	width: 100%; height: 35vh;
+	display: flex; flex-wrap: wrap; align-items: center;
+	font-weight: bold; color: black;
+	padding: 2vh 0px;
+}
+.info_detail_other>div:nth-child(1), .info_detail_other>div:nth-child(2){width: 50%; height: 33.3%;}
+.info_detail_other>div:nth-child(3), .info_detail_other>div:nth-child(4){width: 100%; height: 33.3%;}
+
+/* 상세 정보 - 해당 축제의 태그들 */
+.info_detail_tag{width: 100%; height: 12vh; display: flex; justify-content: flex-start; align-items: center;}
+
+
+/* 태그별 상자들 */
+.idt_box{
+	width: auto; height: auto;
+	border: 2px solid #c7c7c7;
+	border-radius: 1.5em;
+	margin-left: 1vw;
+	display: flex; justify-content: center; align-items: center;
+	padding:  1vh 0.5vw;
+	cursor: pointer;
+}
+.idt_box>span{font-family: 'Nanum Myeongjo', serif; font-size:150%; font-weight:800; color: #595959;}
+
+/*================================= 한줄평 부분 ===========================================*/
+
+/* 한줄평 */
+.info_review_pannel{width: 73%; height: auto; margin-bottom: 10vh;}
+
+/* 한줄평 제목 */
+.info_review_header{
+	width: 100%; height: 9vh;
+	display: flex; justify-content: space-between; align-items: flex-end;
+	border-bottom: 3px solid black;
+	margin-bottom: 3vh;
+}
+.info_review_header>span:nth-child(1){font-family: 'Jua', sans-serif; font-size: 320%; color: black; margin-left: 1vw; margin-bottom: 2vh;}
+.info_review_header>span:nth-child(2){font-family: 'Noto Sans KR', sans-serif; font-size: 150%; color: black; margin-right: 1vw; margin-bottom: 2vh;}
+
+/* 한줄평 목록 화면*/
+.info_review_main{ width: 100%; height: auto;}
+
+/* 한줄평 iframe인 info_review_iframe은 css 선언이 안 먹혀서 html 코드로 css 작성 */
+
+/*한줄평 남기기*/
+.go_review{cursor: pointer;}
+
+/*================================= 추천 축제 부분 ===========================================*/
+
+/* 추천 축제*/
+.info_recommend_pannel{
+	width: 73%; height: auto;
+	background-color: white;
+	margin-bottom: 10vh;
+	display: flex; flex-direction: column; align-items: center;
+}
+
+/*================================= 추천 축제 부분  - 동일 지역 (도시 X) ===========================================*/
+
+/* 같은 지역의 축제 */
+.info_same_area_fes_pannel{width: 100%; height: 70vh; margin-bottom: 10vh;}
+.isa_header{width: 100%; height: 20%; display: flex; justify-content: center; align-items: flex-end;padding-bottom: 5vh; color: black;}
+.isa_header>span{font-family: 'Jua', sans-serif; font-size: 320%;}
+.isa_main{width: 100%; height: 80%; overflow-x: hidden; background-color: #ecf0f1; position: relative; }
+
+/* 같은 지역 축제용 상자 */
+.isa_fes_box{width:80%; height: 80%;background-color: white; margin-right: 3vw; border: 1px solid #EEEEEE; position: relative; cursor: pointer;}
+.isa_fes_box:first-child{margin-left: 3.5vw;}
+.isa_fes_box:hover{border:3px solid #09aff7;}
+
+/*================================= 추천 축제 부분 - 동일 카테고리 ===========================================*/
+
+/* 같은 카테고리의 축제 */
+.info_same_category_fes_pannel{width: 100%; height: 90vh; margin-bottom: 10vh;}
+.isc_header{width: 100%; height: 20%; display: flex; justify-content: center; align-items: flex-end;padding-bottom: 5vh; color: black;}
+.isc_header>span{font-family: 'Jua', sans-serif; font-size: 300%;}
+.isc_main{width: 100%; height: 80%; overflow-x: hidden; background-color: #ecf0f1; position: relative; }
+
+/* 박스 커버 메뉴*/
+.info_cover_menu{width: 100.7%; height: 25%; background: white; position: absolute; left: -1px; bottom: -1px;}
+.icm_date{width: 100%; height: 45%; display: flex; justify-content: flex-start; align-items: center; padding-left: 0.5vw;}
+.icm_date>span{font-family: 'Sunflower', sans-serif; font-weight:300;}
+.icm_name{width: 100%; height: 55%; display: flex; justify-content: flex-start; align-items: center; padding-left: 0.5vw; font-size: 110%; }
+.icm_name>span{font-family: 'Sunflower', sans-serif; font-weight:500; font-size: 140%; text-overflow:ellipsis; overflow: hidden; white-space: nowrap;}
+
+
+/* 같은 카테고리 축제용 상자 */
+.isc_fes_box
+{width:80%; height: 80%;background-color: white; margin-right: 3vw; border: 1px solid #EEEEEE; position: relative; cursor: pointer;}
+.isc_fes_box:first-child
+{margin-left: 3.5vw;}
+.isc_fes_box:hover
+{border:3px solid #09aff7;}
+
+/*================================= 리뷰 목록 부분 ===========================================*/
+
+/* 리뷰 */
+.info_review_list_pannel{width: 73%; height: auto; margin-bottom: 10vh;}
+
+/* 리뷰 제목 */
+.info_review_list_header{
+	width: 100%; height: 9vh;
+	display: flex; justify-content: space-between; align-items: flex-end;
+	border-bottom: 3px solid black;
+	margin-bottom: 3vh;
+}
+.info_review_list_header>span{font-family: 'Jua', sans-serif; font-size: 320%; color: black; margin-left: 1vw; margin-bottom: 2vh;}
+
+/* 리뷰 목록 화면*/
+.info_review_list_main{ width: 100%; height: auto; padding-top: 3vh;}
+.review_preview{
+	width: 90%; height: 20vh; min-height: 160px;
+	margin-left: auto; margin-right: auto; margin-bottom: 3vh;
+	display: flex; flex-direction: column;
+	border: 2px solid #8395a7;
+}
+.review_preview>header{width: 100%; height: 27%; padding-left: 3%; display: flex; align-items: center;}
+.review_preview>main{width: 100%; height: 46%; padding-left: 3%; display: flex; align-items: center; border-top: 2px solid #EEEEEE; border-bottom: 2px solid #EEEEEE;}
+.review_preview>footer{width: 100%; height: 27%; padding-left: 3%; display: flex; align-items: center;}
+
+/* 리뷰 없을 때 */
+.review_preview_none{width: 90%; height: 20vh; margin-left: auto; margin-right: auto;}
+
+/* 더보기 이동용 공간 */
+.info_review_list_footer{ width: 100%; height: 8vh; display: flex; justify-content: flex-end; align-items: center; padding-right: 2vw;}
+.info_review_list_footer>span{font-family: 'Noto Sans KR', sans-serif; font-size: 150%; color: black;}
+
+.go_review_list{cursor: pointer;}
+
+/*================================= 슬라이드 부분 ===========================================*/
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #ECF0F1;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        
+        background-size: cover;
+  		background-position: center;
+  		
+  		justify-content: center;
+  		align-items: center;
+      }
+
+/*================================= 미디어 쿼리 ===========================================*/
+
+@media screen and (max-width: 1342px) {
+			/* 커버 메뉴 내용 */
+			.info_cover_menu{height: 20%;}
+			.icm_date{display: none;}
+			.icm_name{height: 100%;}
+			.icm_name>span{font-size: 120%;}
+}
+
+@media screen and (max-width: 1302px) {
+			/* 리모컨 */
+			.info_ctrl { display: none; }
+			
+			/* 패널 설정*/
+			.info_basic_paneel,
+			.info_detail_pannel,
+			.info_picture_pannel,
+			.info_review_pannel,
+			.info_recommend_pannel{width: 100%;}
+			
+			/* 커버 메뉴 */
+			.info_cover_menu{height: 25%;}
+			.icm_date{display: flex; justify-content: flex-start; align-items: center; padding-left: 0.5vw;}
+			.icm_name{height: 55%;}
+			.icm_name>span{font-size: 140%;}
+}
+
+@media screen and (max-width: 1190px) {
+			.ib_basic_other{padding-right: 5vw;}
+			.info_review_header>span:nth-child(2){margin-right: 5vw;}
+}
+
+@media screen and (max-width: 884px) {
+			/* 커버 메뉴 */
+			.info_cover_menu{height: 20%;}
+			.icm_date{display: none;}
+			.icm_name{height: 100%;}
+			.icm_name>span{font-size: 120%;}
+			
+}
+
+@media screen and (max-width: 701px) {
+			/* 축제 상자 */
+			.isa_fes_box{width: 100%;}
+			.isc_fes_box{width: 100%;}
+			
+}

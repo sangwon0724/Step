@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+/* Header */
+
+	body {
+		padding-top: 3.125em;
+	}
+
+		body.landing {
+			padding-top: 0;
+		}
+
+		@media screen and (max-width: 980px) {
+
+			body {
+				padding-top: 44px;
+			}
+
+		}
+
+	#header {
+		background: #07090c;
+		color: rgba(255, 255, 255, 0.75);
+		cursor: default;
+		height: 3.25em;
+		left: 0;
+		line-height: 3.25em;
+		position: fixed;
+		text-align: right;
+		top: 0;
+		width: 100%;
+		z-index: 10001;
+	}
+
+		#header > h1 {
+			color: #fff;
+			display: inline-block;
+			height: inherit;
+			left: 1.25em;
+			line-height: inherit;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+		}
+
+			#header > h1 a {
+				font-size: 1.25em;
+			}
+
+		#header a {
+			-moz-transition: color 0.2s ease-in-out;
+			-webkit-transition: color 0.2s ease-in-out;
+			-ms-transition: color 0.2s ease-in-out;
+			transition: color 0.2s ease-in-out;
+			color: #fff;
+			display: inline-block;
+			margin-right: 1.25em;
+			text-decoration: none;
+		}
+
+			#header a[href="#nav"] {
+				text-decoration: none;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+				#header a[href="#nav"]:before {
+					content: "≡";
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-font-smoothing: antialiased;
+					font-family: FontAwesome;
+					font-style: normal;
+					font-weight: normal;
+					text-transform: none !important;
+				}
+
+				#header a[href="#nav"]:before {
+					margin: 0 0.5em 0 0;
+				}
+
+			#header a + a[href="#nav"]:last-child {
+				border-left: solid 1px transparent;
+				padding-left: 1.25em;
+				margin-left: 0.5em;
+			}
+
+		#header.alt {
+			background-color: transparent;
+			font-size: 1.25em;
+			padding: 1em 2em;
+			position: absolute;
+		}
+
+			#header.alt > h1 {
+				color: inherit;
+				position: static;
+				float: left;
+			}
+
+			#header.alt a[href="#nav"] {
+				margin-right: 0;
+			}
+
+	@media screen and (max-width: 980px) {
+
+		body {
+			padding-top: 44px;
+		}
+
+		#header {
+			height: 44px;
+			line-height: 44px;
+		}
+
+			#header > h1 {
+				left: 1em;
+			}
+
+				#header > h1 a {
+					font-size: 1em;
+				}
+
+			#header.alt {
+				font-size: 1em;
+			}
+
+	}
+
+	@media screen and (max-width: 480px) {
+
+		#header {
+			min-width: 320px;
+		}
+
+			#header > h1 {
+				left: 1em;
+			}
+
+			#header.alt {
+				padding: 0.5em 1em;
+			}
+
+	}
