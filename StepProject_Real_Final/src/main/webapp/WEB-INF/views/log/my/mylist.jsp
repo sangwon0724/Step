@@ -40,41 +40,9 @@
 										<td width="20%">작성일</td>
 										<td width="10%">조회수</td>
 									</tr>
-									<%--
-										if(size()==0) {
-										--%>
+				<!------------------------------------ 커뮤니티 게시글 시작 --------------------------------------------->
 									<tr align="center" bgcolor="#FFFFFF" height="30">
-										<td colspan="4">작성 리뷰</td>
-										</tr>
-									<%
-									ReviewDAO rdao=new ReviewDAO();
-									ReviewVO rvo = new ReviewVO();
-									rdao.setIdReview(session.getAttribute("ID").toString());
-									if(rdao.list.size()==0){
-										%>
-										<tr align="center" bgcolor="#FFFFFF" height="30">
-										<td colspan="4">작성한 리뷰가 없습니다</td>
-										</tr>
-										<%										
-									}
-									else{
-										for(int i=0;i<rdao.list.size();i++){
-											rvo=rdao.list.get(i);
-											%>
-											<tr align="center" bgcolor="#FFFFFF" height="30">
-											<td></td>
-											<td><a href="/Review/view?no=<%=rvo.getNo() %>"><%= rvo.getTitle()%></a></td>
-											<td><%=rvo.getRdate()%></td>
-											<td><%=rvo.getViews()%></td>								
-											</tr>
-											
-											<% 
-										}
-										
-									}
-									%>
-									<tr align="center" bgcolor="#FFFFFF" height="30">
-									<td colspan="4">작성 게시글</td>
+									<td colspan="4">작성 커뮤니티 게시글</td>
 									</tr>
 									<%
 									CommunityDAO cdao=new CommunityDAO();
@@ -103,26 +71,37 @@
 										
 									}
 									%>
-									 
-									 
-									
-								 		
-								 	
-								 	<%--
-								 	} else {
-								 		for(int i=0;i<dao.list.size();i++){
-								 			vo=dao.list.get(i);
-								 			--%>
-								 	<tr height="25" align="center">
-										<td><%--= vo.getNo() --%></td>
-										<td align="left"><a href="view?no=<%--=vo.getNo() --%>"><%--= vo.getTitle()--%></a></td>
-										<td align="center"><%--=vo.getSigndate() --%></td>
-										<td align="center"><%--=vo.getViews() --%></td>
-									</tr>							 			
-								 			<%--
-								 		}	
-								 	}
-									--%>
+				<!------------------------------------ 커뮤니티 게시글 종료 --------------------------------------------->
+				<!------------------------------------ 리뷰 게시글 시작 ----------------------------------------------->
+									<tr align="center" bgcolor="#FFFFFF" height="30">
+										<td colspan="4">작성 리뷰 게시글</td>
+										</tr>
+									<%
+									ReviewDAO rdao=new ReviewDAO();
+									ReviewVO rvo = new ReviewVO();
+									rdao.setIdReview(session.getAttribute("ID").toString());
+									if(rdao.list.size()==0){
+										%>
+										<tr align="center" bgcolor="#FFFFFF" height="30">
+										<td colspan="4">작성한 리뷰가 없습니다</td>
+										</tr>
+										<%										
+									}
+									else{
+										for(int i=0;i<rdao.list.size();i++){
+											rvo=rdao.list.get(i);
+											%>
+											<tr align="center" bgcolor="#FFFFFF" height="30">
+											<td></td>
+											<td><a href="/Review/view?no=<%=rvo.getNo() %>"><%= rvo.getTitle()%></a></td>
+											<td><%=rvo.getRdate()%></td>
+											<td><%=rvo.getViews()%></td>								
+											</tr>
+											<% 
+										}
+									}
+									%>
+				<!------------------------------------ 리뷰 게시글 종료 ----------------------------------------------->
 								</table>
 							</div>
 						</form>

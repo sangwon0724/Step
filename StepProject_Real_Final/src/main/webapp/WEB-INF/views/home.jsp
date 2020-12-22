@@ -139,7 +139,7 @@
 						</header>
 						<main class="recommend_main img_cover"  style="background-image: url('${pageContext.request.contextPath}/resources/images/<%=fvo_r.getTitle_image() %>');" onclick="goto_info('<%=fvo_r.getFno()%>')"></main>
 						<footer class="recommend_footer">
-							<i class="fas fa-star"></i><span><%=fvo_r.getGrade() %></span>
+							<i class="fas fa-star"></i><span><%=Double.parseDouble(String.format("%.2f",fvo_r.getGrade()))%></span>
 							<i class="far fa-eye"></i><span><%=fvo_r.getViews() %></span>
 						</footer>
 					</div>

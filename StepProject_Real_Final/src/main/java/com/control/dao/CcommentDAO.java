@@ -100,7 +100,7 @@ public class CcommentDAO {
 			while(rs.next()) {
 				vo=new CcommentVO();				
 				vo.setNo(rs.getInt("no"));				
-				vo.setCno(rs.getString("fno"));
+				vo.setCno(rs.getString("cno"));
 				vo.setId(rs.getString("id"));	
 				vo.setName(rs.getString("name"));			
 				vo.setText(rs.getString("text"));				

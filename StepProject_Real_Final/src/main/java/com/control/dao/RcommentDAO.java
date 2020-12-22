@@ -97,7 +97,7 @@ public class RcommentDAO {
 			while(rs.next()) {
 				vo=new RcommentVO();				
 				vo.setNo(rs.getInt("no"));				
-				vo.setRno(rs.getString("fno"));
+				vo.setRno(rs.getString("rno"));
 				vo.setId(rs.getString("id"));	
 				vo.setName(rs.getString("name"));			
 				vo.setText(rs.getString("text"));				
