@@ -25,7 +25,7 @@ public class FcommentService {
 			String name =udao.selectName(vo.getId());
 			vo.setName(name);			
 			dao.insertfcomment(vo);	
-			fdao.updategrade(vo.getFno(), vo.getGrade());
+			fdao.updategrade(vo.getFno(), vo.getGrade());//평점 업데이트
 			return "success";
 		}			
 		return "error";

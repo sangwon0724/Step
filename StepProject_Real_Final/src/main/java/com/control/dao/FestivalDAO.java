@@ -631,7 +631,7 @@ public class FestivalDAO
 				      
 				   }
 				
-				
+			//조회수 증가, views up
 			public String viewsup(String fno) {
 					 String sql = "update festival_detail set views=views+1 where fno=?";		 
 						try {				
@@ -649,6 +649,8 @@ public class FestivalDAO
 							return "fail";
 					}
 			}
+			
+			//평점 업데이트, grade update
 			public String updategrade(String fno,Double grade) {
 				String sql = "update festival_detail set grade_total=grade_total+? where fno=?";		 
 				try {				
