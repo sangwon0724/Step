@@ -93,7 +93,7 @@ public class ReviewController {
 		JSONObject jsonObject = new JSONObject();
 		Gson gson= new Gson();
 
-		String fileRoot = "C:\Users\you\Desktop\My_Space\GitHub\Step\StepProject_Real_Final\src\main\webapp\resources\images\review\\";	//二쇱꽍 源⑥쭊嫄�1
+		String fileRoot = "C:\\Users\\you\\Desktop\\My_Space\\GitHub\\Step\\StepProject_Real_Final\\src\\main\\webapp\\resources\\images\\review\\";	//二쇱꽍 源⑥쭊嫄�1
 		String root="/resources/images/review/";
 		String originalFileName = file.getOriginalFilename();	//二쇱꽍 源⑥쭊嫄�2
 		String extension = originalFileName.substring(originalFileName.lastIndexOf("."));	//二쇱꽍 源⑥쭊嫄�3
